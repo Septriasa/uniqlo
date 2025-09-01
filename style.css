@@ -1,0 +1,38 @@
+*, html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: rgb(255, 255, 255);
+}
+.hero {
+      position: relative;
+      width: 100%;
+      height: 100vh;
+      background: url('foto/awal.jpg') no-repeat center/cover;
+    }
+.navbar {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 95%;
+      padding: 18px;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+}
+.navbar a {
+      color: white;
+      text-decoration: none;
+      font-size: 19px;
+      margin-right: 3rem;
+      margin-left: 3rem;
+}
+.logo {
+    margin-left: 3rem;
+}
+.icon {
+    margin-left: 72rem;
+    margin-bottom: 20rem;
+}
