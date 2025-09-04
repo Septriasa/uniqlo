@@ -30,4 +30,262 @@ nav ul li a:hover {
     color: rgb(0, 0, 0);
     border-bottom: 1px solid rgb(0, 0, 0);
 }
+
 /* layout */
+  .baju img{
+    height: 28rem;
+  }
+    h2 {
+      font-size: 22px;
+      margin-bottom: 8px;
+      margin-left: 1rem;
+    }
+    .kode-produk {
+      font-size: 14px;
+      color: #444;
+      margin-bottom: 15px;
+      margin-left: 1rem;
+    }
+    /* Accordion wrapper */
+    .accordion {
+      border-top: 1px solid #ccc;
+      margin-left: 1rem;
+    }
+    .accordion-item {
+      border-bottom: 1px solid #ccc;
+    }
+    /* Sembunyikan input radio */
+    .accordion input {
+      display: none;
+    }
+    /* Label sebagai tombol */
+    .accordion label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: bold;
+      font-size: 18px;
+      padding: 12px 0;
+      cursor: pointer;
+    }
+    .accordion label::after {
+      content: "+";
+      font-size: 25px;
+      color: #888;
+    }
+    .accordion input:checked + label::after {
+      content: "−";
+    }
+    .accordion .content {
+      display: none;
+      padding: 10px 0 20px 0;
+      font-size: 15px;
+      line-height: 1.6;
+    }
+    .accordion-item .content p{
+      margin-top: -1rem;
+    }
+    .accordion input:checked + label + .content {
+      display: block;
+    }
+    .fitur-content {
+      display: flex;
+      align-items: flex-start;
+      gap: 15px;
+    }
+    .fitur-content p{
+      font-size:large;
+    }
+    .fitur-content img {
+      width: 180px;
+      height: auto;
+      flex-shrink: 0;
+    }
+    @media (max-width: 640px) {
+      .fitur-content {
+        flex-direction: column;
+        align-items: center;
+      }
+      .fitur-content img {
+        width: 100%;
+        max-width: 360px;
+      }
+    }
+
+/* tengah */
+    .product-info {
+      max-width: 400px;
+      text-align: left;
+    }
+    .product-info h1 {
+      font-size: 22px;
+      margin-bottom: 12px;
+    }
+    .colors {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+    .color {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 1px solid #aaa;
+      cursor: pointer;
+    }
+    .color.pink { background: #f5d5d6; }
+    .color.beige { background: #e5dcc5; }
+    .color.blue { background: #c8dce5; }
+    .color.selected {
+      border: 2px solid #0071e3;
+    }
+    .info-text {
+      font-size: 14px;
+      color: #333;
+      margin-bottom: 12px;
+    }
+    .sizes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+    .size {
+      border: 1px solid #555;
+      padding: 8px 14px;
+      font-size: 14px;
+      cursor: pointer;
+      background: #fff;
+    }
+    .size:hover {
+      background: #f5f5f5;
+    }
+    .price {
+      margin-bottom: 12px;
+    }
+    .old-price {
+      text-decoration: line-through;
+      color: black;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .new-price {
+      color: red;
+      font-weight: bold;
+      font-size: 20px;
+      margin-left: 10px;
+    }
+    .stock-info {
+      font-size: 14px;
+      color: #666;
+      margin-bottom: 16px;
+    }
+    .add-to-cart {
+      background: black;
+      color: white;
+      border: none;
+      padding: 14px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      width: 100%;
+      border-radius: 20px;
+    }
+    .add-to-cart:hover {
+      background: #333;
+    }
+
+/* footer */
+footer {
+      background: #f5f5f5;
+      padding: 40px 60px;
+    }
+
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 40px;
+    }
+
+    .footer-container h3 {
+      font-size: 16px;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+
+    .footer-container ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-container ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-container ul li a {
+      text-decoration: none;
+      color: #000;
+      font-size: 14px;
+    }
+
+    .footer-container ul li a:hover {
+      text-decoration: underline;
+    }
+
+    /* Kontak */
+    .contact p {
+      font-size: 14px;
+      margin: 8px 0;
+      color: #333;
+    }
+
+    /* Newsletter */
+    .newsletter p {
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .newsletter a {
+      font-weight: bold;
+      text-decoration: none;
+      color: #000;
+    }
+
+    .newsletter a:hover {
+      text-decoration: underline;
+    }
+
+    /* Social media */
+    .social-icons {
+      display: flex;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .social-icons a {
+      display: inline-block;
+      width: 35px;
+      height: 35px;
+      text-align: center;
+      line-height: 35px;
+      border-radius: 5px;
+      font-size: 18px;
+      text-decoration: none;
+    }
+
+    .social-icons a:hover {
+      background: #ffffff;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .footer-container {
+        grid-template-columns: 1fr;
+      }
+    }
