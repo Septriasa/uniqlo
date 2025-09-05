@@ -29,6 +29,8 @@ nav ul li a:hover {
     color: rgb(0, 0, 0);
     border-bottom: 1px solid rgb(0, 0, 0);
 }
+
+/* layout */
 .awal {
       position: relative;
       width: 100%;

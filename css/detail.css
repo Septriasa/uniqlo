@@ -7,70 +7,179 @@ body {
     background-color: rgb(255, 255, 255);
 }
 .navbar {
-    background-color: #979393;
-    z-index: 9999;
-    position: fixed;
-    width: 100%;
-    top: 0%;
-}
-.navbar-nav {
+      background-color: #979393;
+      z-index: 9999;
+      position: fixed;
+      width: 100%;
+    }
+    .navbar-nav {
       margin: auto;
       margin-right: -2rem;
-}
-.navbar-nav .nav-link {
+    }
+    .navbar-nav .nav-link {
       font-weight: 500;
       text-transform: uppercase;
-      color: #333 !important;
+      color: #000000 !important;
       margin: 0 15px;
-}
-.navbar-brand img {
+    }
+    .navbar-brand img {
       height: 30px;
-}
+    }
 nav ul li a:hover {
     color: rgb(0, 0, 0);
     border-bottom: 1px solid rgb(0, 0, 0);
 }
 
 /* layout */
-  .baju img{
-    height: 28rem;
-  }
-    h2 {
-      font-size: 22px;
-      margin-bottom: 8px;
-      margin-left: 1rem;
+   .container {
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+    }
+    .product-images img {
+      width: 43rem;
+      margin-bottom: -7rem;
+    }
+    .product-info {
+      max-width: 400px;
+    }
+    .product-info h1 {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+    .colors {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .color {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 1px solid #aaa;
+    }
+    .pink { background: #f5d5d6; }
+    .beige { background: #e5dcc5; }
+    .blue { background: #c8dce5; }
+    .selected { border: 2px solid #0071e3; }
+
+    .info-text {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    .sizes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 12px;
+    }
+    .size {
+      border: 1px solid #000;
+      padding: 6px 12px;
+      font-size: 14px;
+    }
+    .price {
+      margin: 10px 0;
+    }
+    .old-price {
+      text-decoration: line-through;
+      color: #000000;
+      font-size: 15px;
+      font-weight: bold;
+    }
+    .new-price {
+      color: red;
+      font-weight: bold;
+      font-size: 19px;
+      margin-left: 10px;
+    }
+    .sale-text {
+      color: red;
+      font-size: 13px;
+    }
+    .rating {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin: 10px 0;
+    }
+    .stars {
+      color: black;
+      font-size: 18px;
+    }
+    .reviews {
+      color: #0071e3;
+      font-size: 14px;
+    }
+    .counter {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 12px 0;
+    }
+    .counter button {
+      width: 28px;
+      height: 28px;
+      border: 1px solid #aaa;
+      background: #fff;
+      font-size: 16px;
+    }
+    .counter span {
+      font-size: 16px;
+    }
+    .stock {
+      font-size: 13px;
+      color: #444;
+      margin-bottom: 15px;
+    }
+    .add-to-cart {
+      background: black;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 15px;
+      cursor: pointer;
+      width: 100%;
+      border-radius: 20px;
+    }
+    .desc {
+      margin-top: 30px;
+      max-width: 700px;
+    }
+
+    .desc h2 {
+      font-size: 20px;
+      margin-bottom: 5px;
+      margin-left: 5rem;
     }
     .kode-produk {
       font-size: 14px;
-      color: #444;
       margin-bottom: 15px;
-      margin-left: 1rem;
+      margin-left: 5rem;
     }
-    /* Accordion wrapper */
     .accordion {
       border-top: 1px solid #ccc;
-      margin-left: 1rem;
+      margin-left: 5rem;
     }
     .accordion-item {
       border-bottom: 1px solid #ccc;
+      margin-left: -0.5rem;
     }
-    /* Sembunyikan input radio */
     .accordion input {
       display: none;
     }
-    /* Label sebagai tombol */
     .accordion label {
       display: flex;
       justify-content: space-between;
       align-items: center;
       font-weight: bold;
-      font-size: 18px;
-      padding: 12px 0;
+      font-size: 16px;
+      padding: 10px 0;
       cursor: pointer;
     }
     .accordion label::after {
       content: "+";
-      font-size: 25px;
+      font-size: 18px;
       color: #888;
     }
     .accordion input:checked + label::after {
@@ -78,120 +187,24 @@ nav ul li a:hover {
     }
     .accordion .content {
       display: none;
-      padding: 10px 0 20px 0;
-      font-size: 15px;
-      line-height: 1.6;
-    }
-    .accordion-item .content p{
-      margin-top: -1rem;
+      padding: 10px 0 15px 0;
+      font-size: 14px;
+      line-height: 1.5;
     }
     .accordion input:checked + label + .content {
       display: block;
     }
     .fitur-content {
       display: flex;
+      gap: 12px;
       align-items: flex-start;
-      gap: 15px;
-    }
-    .fitur-content p{
-      font-size:large;
     }
     .fitur-content img {
-      width: 180px;
+      width: 160px;
       height: auto;
-      flex-shrink: 0;
     }
-    @media (max-width: 640px) {
-      .fitur-content {
-        flex-direction: column;
-        align-items: center;
-      }
-      .fitur-content img {
-        width: 100%;
-        max-width: 360px;
-      }
-    }
-
-/* tengah */
-    .product-info {
-      max-width: 400px;
-      text-align: left;
-    }
-    .product-info h1 {
-      font-size: 22px;
-      margin-bottom: 12px;
-    }
-    .colors {
-      display: flex;
-      gap: 10px;
-      margin-bottom: 8px;
-    }
-    .color {
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      border: 1px solid #aaa;
-      cursor: pointer;
-    }
-    .color.pink { background: #f5d5d6; }
-    .color.beige { background: #e5dcc5; }
-    .color.blue { background: #c8dce5; }
-    .color.selected {
-      border: 2px solid #0071e3;
-    }
-    .info-text {
-      font-size: 14px;
-      color: #333;
-      margin-bottom: 12px;
-    }
-    .sizes {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 16px;
-    }
-    .size {
-      border: 1px solid #555;
-      padding: 8px 14px;
-      font-size: 14px;
-      cursor: pointer;
-      background: #fff;
-    }
-    .size:hover {
-      background: #f5f5f5;
-    }
-    .price {
-      margin-bottom: 12px;
-    }
-    .old-price {
-      text-decoration: line-through;
-      color: black;
-      font-size: 16px;
-      font-weight: bold;
-    }
-    .new-price {
-      color: red;
-      font-weight: bold;
-      font-size: 20px;
-      margin-left: 10px;
-    }
-    .stock-info {
-      font-size: 14px;
-      color: #666;
-      margin-bottom: 16px;
-    }
-    .add-to-cart {
-      background: black;
-      color: white;
-      border: none;
-      padding: 14px 20px;
-      font-size: 16px;
-      cursor: pointer;
-      width: 100%;
-      border-radius: 20px;
-    }
-    .add-to-cart:hover {
-      background: #333;
+    .fitur-content p {
+      margin: 0;
     }
 
 /* footer */
