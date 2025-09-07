@@ -35,10 +35,11 @@ nav ul li a:hover {
       display: flex;
       gap: 40px;
       align-items: flex-start;
+      padding-top: 1rem;
     }
     .product-images img {
       width: 43rem;
-      margin-bottom: -7rem;
+      /* margin-bottom: -7rem; */
     }
     .product-info {
       max-width: 400px;
@@ -300,5 +301,147 @@ footer {
     @media (max-width: 600px) {
       .footer-container {
         grid-template-columns: 1fr;
+      }
+    }
+
+    /* Large tablets and small desktops */
+    @media (max-width: 1024px) {
+      .container {
+        gap: 20px;
+        padding: 15px;
+      }
+      
+      .product-images img {
+        max-width: 100%;
+      }
+    }
+
+    /* Tablets */
+    @media (max-width: 900px) {
+      
+      .container {
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      .product-images,
+      .product-info {
+        max-width: 100%;
+        width: 100%;
+      }
+      
+      .product-images {
+        margin-bottom: 20px;
+      }
+      
+      .desc h2,
+      .kode-produk {
+        margin-left: 0;
+      }
+      
+      .accordion {
+        margin-left: 0;
+      }
+      
+      .accordion-item {
+        margin-left: 0;
+      }
+    }
+
+    /* Mobile devices */
+    @media (max-width: 768px) {
+      .container {
+        padding: 10px;
+        margin-top: 70px;
+      }
+      
+      
+      .product-info h1 {
+        font-size: 18px;
+      }
+      
+      .sizes {
+        gap: 4px;
+      }
+      
+      .size {
+        padding: 4px 8px;
+        font-size: 12px;
+      }
+      
+      .add-to-cart {
+        padding: 10px 15px;
+        font-size: 14px;
+      }
+      
+      .fitur-content {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .fitur-content img {
+        width: 120px;
+        margin: 0 auto;
+      }
+      
+    }
+
+    /* Small mobile devices */
+    @media (max-width: 600px) {
+      
+      .container {
+        padding: 10px;
+      }
+     
+      .product-info h1 {
+        font-size: 16px;
+        line-height: 1.3;
+      }
+      
+      .old-price,
+      .new-price {
+        font-size: 14px;
+      }
+      
+      .new-price {
+        font-size: 16px;
+      }
+      
+      .colors {
+        justify-content: center;
+      }
+      
+      .sizes {
+        justify-content: center;
+      }
+      
+      .social-icons a {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+      }
+    }
+
+    /* Extra small devices */
+    @media (max-width: 480px) {
+      .container {
+        gap: 15px;
+        padding: 5px;
+      }
+      
+      .product-info {
+        min-width: auto;
+      }
+      
+      .counter {
+        justify-content: center;
+      }
+      
+      .rating {
+        justify-content: center;
+      }
+      
+      .fitur-content img {
+        width: 100px;
       }
     }
