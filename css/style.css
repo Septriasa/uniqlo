@@ -31,7 +31,7 @@ nav ul li a:hover {
     border-bottom: 1px solid rgb(0, 0, 0);
 }
 
-/* layout */
+/* layout 1*/
 .awal {
       position: relative;
       width: 100%;
@@ -132,3 +132,330 @@ nav ul li a:hover {
     height: 100vh;
     background: url('https://im.uniqlo.com/global-cms/spa/resfbb3fb2d5a11f6c39bc5ff33d5ea2faffr.jpg') no-repeat center/cover;
 }
+
+/* layout 2 */
+.container-fluid{ 
+    font-weight: bold;
+}
+.card-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 70px;
+}
+.card{
+    width: 250px;
+    background-color: #ffffff;                              
+    overflow: hidden;
+    margin: 10px;
+    height: 33rem;
+}
+.card-container .card:hover{
+      transform: translateY(-5px);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.12);
+}
+.card-content{
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+.card-content h6{
+  font-size:medium;
+  text-align: center;
+}
+.card-content p{
+  text-align: center;
+  margin-top: -0,5rem;
+}
+.card h5{
+    font-weight: normal;
+    margin: 8px 0;
+}
+.card h6 {
+    margin: 8px 0;
+}
+.warna p{
+    color: red;
+    font-weight: normal;
+    margin-top: -1rem;
+}
+.merah p{
+    text-decoration: line-through;
+}
+.mrh p{
+    color: red;
+    font-weight: bold;
+    margin-top: -1rem;
+}
+.card a{
+    margin-top: -1rem;
+}
+.card-content {
+    margin-bottom: 2rem;
+}
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: 1rem;
+}
+
+/* layout 3 */
+.product-images img {
+      width: 43rem;
+    }
+    .product-info {
+      max-width: 400px;
+    }
+    .product-info h1 {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
+    .colors {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 6px;
+    }
+    .color {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      border: 1px solid #aaa;
+    }
+    .pink { background: #f5d5d6; }
+    .beige { background: #e5dcc5; }
+    .blue { background: #c8dce5; }
+    .selected { border: 2px solid #0071e3; }
+
+    .info-text {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+    .sizes {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 12px;
+    }
+    .size {
+      border: 1px solid #000;
+      padding: 6px 12px;
+      font-size: 14px;
+    }
+    .price {
+      margin: 10px 0;
+    }
+    .old-price {
+      text-decoration: line-through;
+      color: #000000;
+      font-size: 15px;
+      font-weight: bold;
+    }
+    .new-price {
+      color: red;
+      font-weight: bold;
+      font-size: 19px;
+      margin-left: 10px;
+    }
+    .sale-text {
+      color: red;
+      font-size: 13px;
+    }
+    .rating {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      margin: 10px 0;
+    }
+    .stars {
+      color: black;
+      font-size: 18px;
+    }
+    .reviews {
+      color: #0071e3;
+      font-size: 14px;
+    }
+    .counter {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 12px 0;
+    }
+    .counter button {
+      width: 28px;
+      height: 28px;
+      border: 1px solid #aaa;
+      background: #fff;
+      font-size: 16px;
+    }
+    .counter span {
+      font-size: 16px;
+    }
+    .stock {
+      font-size: 13px;
+      color: #444;
+      margin-bottom: 15px;
+    }
+    .add-to-cart {
+      background: black;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 15px;
+      cursor: pointer;
+      width: 100%;
+      border-radius: 20px;
+    }
+    .desc {
+      margin-top: 30px;
+      max-width: 700px;
+    }
+
+    .desc h2 {
+      font-size: 20px;
+      margin-bottom: 5px;
+      margin-left: 5rem;
+    }
+    .kode-produk {
+      font-size: 14px;
+      margin-bottom: 15px;
+      margin-left: 5rem;
+    }
+    .accordion {
+      border-top: 1px solid #ccc;
+      margin-left: 5rem;
+    }
+    .accordion-item {
+      border-bottom: 1px solid #ccc;
+      margin-left: -0.5rem;
+    }
+    .accordion input {
+      display: none;
+    }
+    .accordion label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: bold;
+      font-size: 16px;
+      padding: 10px 0;
+      cursor: pointer;
+    }
+    .accordion label::after {
+      content: "+";
+      font-size: 18px;
+      color: #888;
+    }
+    .accordion input:checked + label::after {
+      content: "−";
+    }
+    .accordion .content {
+      display: none;
+      padding: 10px 0 15px 0;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .accordion input:checked + label + .content {
+      display: block;
+    }
+    .fitur-content {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+    }
+    .fitur-content img {
+      width: 160px;
+      height: auto;
+    }
+    .fitur-content p {
+      margin: 0;
+    }
+
+/* footer */
+footer {
+      background: #f5f5f5;
+      padding: 40px 60px;
+    }
+
+    .footer-container {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 40px;
+    }
+
+    .footer-container h3 {
+      font-size: 16px;
+      margin-bottom: 15px;
+      font-weight: bold;
+    }
+
+    .footer-container ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .footer-container ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-container ul li a {
+      text-decoration: none;
+      color: #000;
+      font-size: 14px;
+    }
+
+    .footer-container ul li a:hover {
+      text-decoration: underline;
+    }
+    .contact p {
+      font-size: 14px;
+      margin: 8px 0;
+      color: #333;
+    }
+    .newsletter p {
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .newsletter a {
+      font-weight: bold;
+      text-decoration: none;
+      color: #000;
+    }
+
+    .newsletter a:hover {
+      text-decoration: underline;
+    }
+    .social-icons {
+      display: flex;
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .social-icons a {
+      display: inline-block;
+      width: 35px;
+      height: 35px;
+      text-align: center;
+      line-height: 35px;
+      border-radius: 5px;
+      font-size: 18px;
+      text-decoration: none;
+    }
+
+    .social-icons a:hover {
+      background: #ffffff;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .footer-container {
+        grid-template-columns: 1fr;
+      }
+    }
