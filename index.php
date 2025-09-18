@@ -6,9 +6,9 @@
 
         <!-- akan dirubah -->
         <?php
-            // include "routes/web.php"
+            include "routes/web.php"
         ?>
-        <?php include "page/showall.php"; ?>
+        <?php //include "page/showall.php"; ?>
     
     <?php include "component/footer.php"; ?>
 

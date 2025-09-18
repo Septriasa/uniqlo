@@ -4,33 +4,26 @@
     box-sizing: border-box;
 }
 body {
-    background-color: rgb(255, 255, 255);
-}
-
-.navbar {
-      background-color: #979393;
-      z-index: 9999;
-      position: fixed;
-      width: 100%;
+      margin: 0;
+      padding-top: 70px; /* kasih ruang sesuai tinggi navbar */
+      background-color: #fff;
     }
-    .navbar-nav {
-      margin: auto;
-      margin-right: -2rem;
+    .navbar {
+      background-color: #979393 !important; /* warna abu sesuai contoh */
     }
     .navbar-nav .nav-link {
       font-weight: 500;
       text-transform: uppercase;
-      color: #000000 !important;
+      color: #000 !important;
       margin: 0 15px;
+    }
+    .navbar-nav .nav-link:hover {
+      color: #000;
+      border-bottom: 1px solid #000;
     }
     .navbar-brand img {
       height: 30px;
     }
-nav ul li a:hover {
-    color: rgb(0, 0, 0);
-    border-bottom: 1px solid rgb(0, 0, 0);
-}
-
 /* layout 1*/
 .awal {
       position: relative;
@@ -132,7 +125,6 @@ nav ul li a:hover {
     height: 100vh;
     background: url('https://im.uniqlo.com/global-cms/spa/resfbb3fb2d5a11f6c39bc5ff33d5ea2faffr.jpg') no-repeat center/cover;
 }
-
 /* layout 2 */
 .container-fluid{ 
     font-weight: bold;
@@ -198,14 +190,13 @@ nav ul li a:hover {
     gap: 6px;
     margin-left: 1rem;
 }
-
 /* layout 3 */
 .product-images img {
       width: 43rem;
     }
-    .product-info {
-      max-width: 400px;
-    }
+.product-info {
+    max-width: 400px;
+}
     .product-info h1 {
       font-size: 20px;
       margin-bottom: 12px;
