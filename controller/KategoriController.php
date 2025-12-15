@@ -50,17 +50,17 @@ class KategoriController {
         }
     }
 
-    public function delete() {
-        if (isset($_GET['id']) && is_numeric($_GET['id'])) {
-            $id = (int)$_GET['id'];
-            $kategori = new Kategori();
-            $kategori->delete($id);
+    // public function delete() {
+    //     if (isset($_GET['id']) && is_numeric($_GET['id'])) {
+    //         $id = (int)$_GET['id'];
+    //         $kategori = new Kategori();
+    //         $kategori->delete($id);
             
-            $this->safeRedirect('?page=kategori&action=index');
-        } else {
-            $this->safeRedirect('?page=kategori&action=index');
-        }
-    }
+    //         $this->safeRedirect('?page=kategori&action=index');
+    //     } else {
+    //         $this->safeRedirect('?page=kategori&action=index');
+    //     }
+    // }
 }
 
 // JANGAN ADA SPASI ATAU KARAKTER SETELAH ?> 

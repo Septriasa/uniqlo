@@ -139,13 +139,13 @@
                     <tr>
                         <td><?= htmlspecialchars($row['ID_kategori']); ?></td>
                         <td><?= htmlspecialchars($row['nama_kategori']); ?></td>
-                       <td>
+                       <!-- <td>
                             <a href="?page=genre&hapus=<?= $row['ID_kategori']; ?>" 
                             class="action-link"
                             onclick="return confirm('Apakah Anda yakin ingin menghapus kategori \"<?= addslashes($row['nama_kategori']); ?>\"?')">
                             🗑️ Hapus
                             </a>
-                        </td>
+                        </td> -->
 
                     </tr>
                     <?php endforeach; ?>

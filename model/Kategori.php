@@ -22,9 +22,9 @@ class Kategori {
     }
 
     // Hapus kategori
-    public function delete($id) {
-        $query = "DELETE FROM tb_kategori WHERE ID_kategori = ?";
-        $stmt = $this->db->prepare($query);
-        return $stmt->execute([$id]);
-    }
+    // public function delete($id) {
+    //     $query = "DELETE FROM tb_kategori WHERE ID_kategori = ?";
+    //     $stmt = $this->db->prepare($query);
+    //     return $stmt->execute([$id]);
+    // }
 }

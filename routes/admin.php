@@ -34,9 +34,9 @@ switch ($page) {
                 }
                 break;
 
-            case 'delete':
-                $kategoriController->delete();
-                break;
+            // case 'delete':
+            //     $kategoriController->delete();
+            //     break;
 
             default:
                 echo "Action tidak ditemukan";
