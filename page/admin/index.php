@@ -44,7 +44,7 @@
   <div class="navbar-wrapper">
    <div class="m-header">
   <a href="index.html" class="b-brand text-primary">
-    <img src="./assets/images/logo1.png" class="img-fluid logo-lg" alt="logo uniqlo">
+    <img src="./assets/images/.." class="img-fluid logo-lg" alt="logo uniqlo">
   </a>
 </div>
 
@@ -321,7 +321,7 @@
   <div class="pc-content">
     <!-- HAPUS DUPLIKASI INI -->
     <!-- <div class="pc-content"> -->
-      <?php include(_DIR_ . '/../../routes/admin.php'); ?>
+      <?php include(__DIR__. '/../../routes/admin.php'); ?>
     <!-- </div> -->
   </div>
 </div>
