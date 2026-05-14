@@ -4,26 +4,34 @@
     box-sizing: border-box;
 }
 body {
-      margin: 0;
-      padding-top: 70px; /* kasih ruang sesuai tinggi navbar */
-      background-color: #fff;
-    }
-    .navbar {
-      background-color: #979393 !important; /* warna abu sesuai contoh */
-    }
-    .navbar-nav .nav-link {
-      font-weight: 500;
-      text-transform: uppercase;
-      color: #000 !important;
-      margin: 0 15px;
-    }
-    .navbar-nav .nav-link:hover {
-      color: #000;
-      border-bottom: 1px solid #000;
-    }
-    .navbar-brand img {
-      height: 30px;
-    }
+  margin: 0 !important;
+  padding: 0 !important;
+  padding-top: 60px !important; 
+  background-color: #fff;
+}
+
+.navbar {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100% !important;
+   background-color: #979393 !important; 
+  z-index: 1030; 
+  margin: 0 !important; 
+}
+
+.navbar-brand img {
+  height: 35px;
+  margin-left: 10px;
+}
+
+.navbar-nav .nav-link {
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #000 !important;
+  margin: 0 15px;
+}
 /* layout 1*/
 .awal {
       position: relative;
