@@ -12,10 +12,10 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="index.php">Home</a>
+            <a class="nav-link" href="?page=home">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="detail.html">Detail</a>
+            <a class="nav-link" href="?page=detail">Detail</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="?page=showall">ShowAll</a>
