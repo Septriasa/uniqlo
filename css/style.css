@@ -16,7 +16,7 @@ body {
   left: 0 !important;
   right: 0 !important;
   width: 100% !important;
-   background-color: #979393 !important; 
+   background-color: #ffffff !important; 
   z-index: 1030; 
   margin: 0 !important; 
 }
@@ -32,6 +32,7 @@ body {
   color: #000 !important;
   margin: 0 15px;
 }
+
 /* layout 1*/
 .awal {
       position: relative;
@@ -369,84 +370,49 @@ body {
       margin: 0;
     }
 
-/* footer */
 footer {
-      background: #f5f5f5;
-      padding: 40px 60px;
-    }
+  background: #f5f5f5;
+  padding: 40px 20px; 
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center; 
+}
 
-    .footer-container {
-      display: grid;
-      grid-template-columns: repeat(5, 1fr);
-      gap: 40px;
-    }
+.footer-container {
+  display: flex;
+  justify-content: space-between; 
+  gap: 80px; 
+  width: 100%;
+  max-width: 900px; 
+  text-align: left; 
+}
 
-    .footer-container h3 {
-      font-size: 16px;
-      margin-bottom: 15px;
-      font-weight: bold;
-    }
+.footer-container h3 {
+  font-size: 16px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  color: #000; 
+}
 
-    .footer-container ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
+.footer-container ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
 
-    .footer-container ul li {
-      margin-bottom: 10px;
-    }
+.footer-container ul li {
+  margin-bottom: 10px;
+}
 
-    .footer-container ul li a {
-      text-decoration: none;
-      color: #000;
-      font-size: 14px;
-    }
+.footer-container ul li a {
+  text-decoration: none;
+  color: #000;
+  font-size: 14px;
+}
 
-    .footer-container ul li a:hover {
-      text-decoration: underline;
-    }
-    .contact p {
-      font-size: 14px;
-      margin: 8px 0;
-      color: #333;
-    }
-    .newsletter p {
-      font-size: 14px;
-      margin-bottom: 15px;
-    }
-
-    .newsletter a {
-      font-weight: bold;
-      text-decoration: none;
-      color: #000;
-    }
-
-    .newsletter a:hover {
-      text-decoration: underline;
-    }
-    .social-icons {
-      display: flex;
-      gap: 12px;
-      margin-top: 10px;
-    }
-
-    .social-icons a {
-      display: inline-block;
-      width: 35px;
-      height: 35px;
-      text-align: center;
-      line-height: 35px;
-      border-radius: 5px;
-      font-size: 18px;
-      text-decoration: none;
-    }
-
-    .social-icons a:hover {
-      background: #ffffff;
-    }
-
-    /* Responsive */
+.footer-container ul li a:hover {
+  text-decoration: underline;
+}
     @media (max-width: 900px) {
       .footer-container {
         grid-template-columns: repeat(2, 1fr);

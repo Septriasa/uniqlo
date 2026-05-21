@@ -21,18 +21,6 @@
             <a class="nav-link" href="?page=showall">ShowAll</a>
           </li>
         </ul>
-        <!-- Menu kanan -->
-        <ul class="navbar-nav ms-auto me-3">
-          <li class="nav-item">
-            <a class="nav-link" href="#"><i class="bi bi-globe"></i></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><i class="bi bi-heart"></i></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#"><i class="bi bi-cart"></i></a>
-          </li>
-        </ul>
       </div>
     </div>
   </nav>
