@@ -1,23 +1,23 @@
 <?php
-// uniqlo/route/admin.php
-
-// Mulai output buffering di awal
 ob_start();
 
+require_once __DIR__ . '/../config/database.php';
+require_once __DIR__ . '/../model/Kategori.php';
+require_once __DIR__ . '/../model/Produk.php';
+require_once __DIR__ . '/../controller/KategoriController.php';
+require_once __DIR__ . '/../controller/ProdukController.php';
 
-
-require_once(__DIR__ . '/../config/Database.php');
-require_once(__DIR__ . '/../model/Kategori.php');
-require_once(__DIR__ . '/../controller/KategoriController.php');
-
+// 4. Tangkap parameter halaman
 $page   = $_GET['page']   ?? 'dashboard';
 $action = $_GET['action'] ?? 'index';
 
 $kategoriController = new KategoriController();
+$produkController   = new ProdukController();
 
+// 5. Routing System
 switch ($page) {
     case 'dashboard':
-        include __DIR__ . '/../page/admin/loyo.php';
+        include __DIR__ . '/../page/admin/admin-page/dashboard_home.php';
         break;
 
     case 'kategori':
@@ -25,7 +25,6 @@ switch ($page) {
             case 'index':
                 $kategoriController->index();
                 break;
-
             case 'create':
                 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $kategoriController->store();
@@ -33,22 +32,54 @@ switch ($page) {
                     $kategoriController->create();
                 }
                 break;
-
-            // case 'delete':
-            //     $kategoriController->delete();
-            //     break;
-
+            case 'edit':
+                if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                    $kategoriController->update();
+                } else {
+                    $kategoriController->edit();
+                }
+                break;
+            case 'delete':
+                $kategoriController->delete();
+                break;
             default:
-                echo "Action tidak ditemukan";
+                $kategoriController->index();
+                break;
+        }
+        break;
+
+    case 'produk':
+        switch ($action) {
+            case 'index':
+                $produkController->index();
+                break;
+            case 'create':
+                if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                    $produkController->store();
+                } else {
+                    $produkController->create();
+                }
+                break;
+            case 'edit':
+                if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                    $produkController->update();
+                } else {
+                    $produkController->edit();
+                }
+                break;
+            case 'delete':
+                $produkController->delete();
+                break;
+            default:
+                $produkController->index();
                 break;
         }
         break;
 
     default:
-        echo "Halaman tidak ditemukan";
+        include __DIR__ . '/../page/admin/admin-page/dashboard_home.php';
         break;
 }
 
-// Hapus output buffer dan tampilkan
 ob_end_flush();
 ?>

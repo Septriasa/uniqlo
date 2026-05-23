@@ -1,28 +1,33 @@
 <?php
 class Database {
-    private $host = "localhost";
-    private $db_name = "uniqlo";   // ganti sesuai nama database kamu
-    private $username = "root";
-    private $password = "";
-    private $conn;
+    // Properti konfigurasi database
+    private $host     = 'localhost';
+    private $username = 'root';
+    private $password = '';
+    private $database = 'uniqlouse';
+    private $koneksi;
 
+    // Method untuk membuat dan mengambil koneksi
     public function getConnection() {
-        $this->conn = null;
+        $this->koneksi = null;
 
         try {
-            $this->conn = new PDO(
-                "mysql:host=" . $this->host . ";dbname=" . $this->db_name,
-                $this->username,
+            // Membuat koneksi PDO
+            $this->koneksi = new PDO(
+                "mysql:host=" . $this->host . ";dbname=" . $this->database . ";charset=utf8mb4", 
+                $this->username, 
                 $this->password
             );
-
-            // buat fetch associative array otomatis
-            $this->conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
-
-        } catch (PDOException $exception) {
-            die("Koneksi database gagal: " . $exception->getMessage());
+            
+            // Mengatur mode error
+            $this->koneksi->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+            $this->koneksi->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+            
+        } catch (PDOException $e) {
+            die("Koneksi database gagal: " . $e->getMessage());
         }
 
-        return $this->conn;
+        return $this->koneksi;
     }
 }
+?>
