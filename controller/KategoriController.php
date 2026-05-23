@@ -1,7 +1,4 @@
 <?php
-// uniqlo/controller/KategoriController.php
-// JANGAN ADA SPASI ATAU KARAKTER SEBELUM <?php !!!
-
 require_once __DIR__ . '/../model/Kategori.php';
 
 class KategoriController {
@@ -78,5 +75,4 @@ class KategoriController {
         }
     }
 }
-
-// JANGAN ADA SPASI ATAU KARAKTER SETELAH ?>
+?>

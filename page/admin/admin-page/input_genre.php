@@ -111,12 +111,12 @@
 </head>
 <body>
     <div class="container">
-        <h2>➕ Tambah Kategori Baru</h2>
+        <h2> Tambah Kategori Baru</h2>
         
         <div class="card">
             <?php if (isset($_GET['error'])): ?>
                 <div class="message error">
-                    ❌ Nama kategori tidak boleh kosong!
+                    Nama kategori tidak boleh kosong!
                 </div>
             <?php endif; ?>
             
@@ -140,7 +140,6 @@
     </div>
     
     <script>
-        // Validasi form
         document.querySelector('form').addEventListener('submit', function(e) {
             var input = document.getElementById('nama_kategori');
             if (input.value.trim() === '') {

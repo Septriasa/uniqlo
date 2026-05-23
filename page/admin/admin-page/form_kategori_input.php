@@ -6,7 +6,7 @@
 </div>
 
 <?php if (isset($_GET['error'])): ?>
-<div class="alert alert-danger">❌ Nama kategori tidak boleh kosong!</div>
+<div class="alert alert-danger">Nama kategori tidak boleh kosong!</div>
 <?php endif; ?>
 
 <div class="card">

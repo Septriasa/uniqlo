@@ -3,7 +3,6 @@ if (isset($_SESSION['kategori_list'])) {
     $kategoriList = $_SESSION['kategori_list'];
     unset($_SESSION['kategori_list']);
 } else {
-    // Memanggil model Kategori secara aman menggunakan __DIR__
     require_once __DIR__ . '/../../../model/Kategori.php';
     $kat = new Kategori();
     $kategoriList = $kat->getAll();
@@ -17,7 +16,7 @@ if (isset($_SESSION['kategori_list'])) {
 </div>
 
 <?php if (isset($_GET['error'])): ?>
-<div class="alert alert-danger">❌ Nama produk tidak boleh kosong!</div>
+<div class="alert alert-danger">Nama produk tidak boleh kosong!</div>
 <?php endif; ?>
 
 <div class="card">

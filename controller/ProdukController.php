@@ -27,10 +27,7 @@ class ProdukController {
 
     public function create() {
         $kategoriModel = new Kategori();
-        // SINKRONISASI: Simpan data ke session 'kategori_list' agar terbaca oleh form_produk_input.php
         $_SESSION['kategori_list'] = $kategoriModel->getAll(); 
-        
-        // PERBAIKAN: Mengarah ke file form input produk yang benar sesuai struktur folder kamu
         include __DIR__ . '/../page/admin/admin-page/form_produk_input.php'; 
         exit();
     }

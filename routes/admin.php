@@ -7,14 +7,12 @@ require_once __DIR__ . '/../model/Produk.php';
 require_once __DIR__ . '/../controller/KategoriController.php';
 require_once __DIR__ . '/../controller/ProdukController.php';
 
-// 4. Tangkap parameter halaman
 $page   = $_GET['page']   ?? 'dashboard';
 $action = $_GET['action'] ?? 'index';
 
 $kategoriController = new KategoriController();
 $produkController   = new ProdukController();
 
-// 5. Routing System
 switch ($page) {
     case 'dashboard':
         include __DIR__ . '/../page/admin/admin-page/dashboard_home.php';

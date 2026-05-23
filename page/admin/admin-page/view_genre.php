@@ -109,12 +109,10 @@
         <a href="?page=kategori&action=create" class="btn">➕ Tambah Kategori Baru</a>
         
         <?php 
-        // Ambil data dari session atau langsung
         if (isset($_SESSION['kategori_data'])) {
             $data = $_SESSION['kategori_data'];
             unset($_SESSION['kategori_data']);
         } else {
-            // Fallback jika session tidak bekerja
             require_once __DIR__ . '/../../../model/Kategori.php';
             $kategori = new Kategori();
             $data = $kategori->getAll();
@@ -139,14 +137,6 @@
                     <tr>
                         <td><?= htmlspecialchars($row['ID_kategori']); ?></td>
                         <td><?= htmlspecialchars($row['nama_kategori']); ?></td>
-                       <!-- <td>
-                            <a href="?page=genre&hapus=<?= $row['ID_kategori']; ?>" 
-                            class="action-link"
-                            onclick="return confirm('Apakah Anda yakin ingin menghapus kategori \"<?= addslashes($row['nama_kategori']); ?>\"?')">
-                            🗑️ Hapus
-                            </a>
-                        </td> -->
-
                     </tr>
                     <?php endforeach; ?>
                 </tbody>
@@ -158,7 +148,6 @@
     </div>
     
     <script>
-        // Konfirmasi sebelum hapus
         function confirmDelete(id, name) {
             return confirm("Apakah Anda yakin ingin menghapus kategori \"" + name + "\"?");
         }
